@@ -32,9 +32,10 @@
 	/**
 	 * @brief Physical electrical level of a pin
 	 */
-enum class PinState : uint8_t {
-	Low  = 0,
-	High = 1
+enum class ActiveLevel : uint8_t {
+	Unset = 0,
+	ActiveLow  = 1,
+	ActiveHigh = 2
 };
 
 	/**
@@ -72,3 +73,4 @@ enum class LogicLevel : uint8_t {
 };
 
 // EOF PinDefinitions.h
+
