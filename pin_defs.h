@@ -53,7 +53,7 @@ enum class PinMode : uint8_t {
 	OutputOpenDrain,    // Open-drain for shared buses
 	InputOutput,        // Bidirectional mode
 	AnalogInput,        // ADC mode
-    AnalogOutput        // DAC mode
+	AnalogOutput        // DAC mode
 };
 
 // =============================================================================
@@ -70,5 +70,6 @@ enum class LogicLevel : uint8_t {
 };
 
 // EOF PinDefinitions.h
+
 
 
