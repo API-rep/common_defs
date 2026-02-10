@@ -29,48 +29,46 @@
 // 2. HARDWARE STATE AND CONFIGURATION
 // =============================================================================
 
-	/**
-	 * @brief Physical electrical level of a pin
-	 */
+/**
+ * @brief Physical electrical level of a pin
+ */
+
 enum class ActiveLevel : uint8_t {
 	Unset = 0,
 	ActiveLow  = 1,
 	ActiveHigh = 2
 };
 
-	/**
-	 * @brief Hardware pin mode configuration
-	 */
+
+/**
+ * @brief Hardware pin mode configuration
+ */
+
 enum class PinMode : uint8_t {
-	Disable = 0,        // High-impedance / Disconnected
+	Unset = 0,          // High-impedance / Disconnected
 	Input,              // Floating input
 	InputPullup,        // Input with internal pull-up
 	InputPulldown,      // Input with internal pull-down
 	Output,             // Push-pull output
 	OutputOpenDrain,    // Open-drain for shared buses
 	InputOutput,        // Bidirectional mode
-	Analog              // ADC/DAC mode
+	AnalogInput,        // ADC mode
+    AnalogOutput        // DAC mode
 };
 
 // =============================================================================
 // 3. LOGIC AND POLARITY ABSTRACTION
 // =============================================================================
 
-	/**
-	 * @brief Component electrical polarity
-	 */
-enum class ActiveLevel : uint8_t {
-	ActiveLow  = 0,
-	ActiveHigh = 1
-};
+/**
+ * @brief Logical intent level
+ */
 
-	/**
-	 * @brief Logical intent level
-	 */
 enum class LogicLevel : uint8_t {
 	Inactive = 0,
 	Active   = 1
 };
 
 // EOF PinDefinitions.h
+
 
