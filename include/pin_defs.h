@@ -86,6 +86,20 @@ enum class RotationDir : int8_t {
 	CCW           // Counter-clockwise (Negative)
 };
 
+// =============================================================================
+// 5. SPECIALIZED HARDWARE STATE AND CONFIGURATION
+// =============================================================================
+
+/**
+ * @brief Specialized decay mode for H-bridge components
+ */
+
+enum class DecayMode : int8_t {
+	Unset = 0,  // Error or uninitialized
+	SlowDecay,  // Slow decay reticulation
+	FastDecay   // Fast decay reticulation
+};
+
 // EOF PinDefinitions.h
 
 
