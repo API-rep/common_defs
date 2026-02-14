@@ -56,6 +56,7 @@ enum class PinMode : uint8_t {
 	AnalogOutput        // DAC mode
 };
 
+
 // =============================================================================
 // 3. LOGIC AND POLARITY ABSTRACTION
 // =============================================================================
@@ -67,6 +68,22 @@ enum class PinMode : uint8_t {
 enum class LogicLevel : uint8_t {
 	Inactive = 0,
 	Active   = 1
+};
+
+
+// =============================================================================
+// 4. MOTION SPECIALIZATIONS
+// =============================================================================
+
+/**
+ * @brief Specialized direction for rotating components (Motors, Servos)
+ */
+
+enum class RotationDir : int8_t {
+	Unknown = 0,  // Error or uninitialized
+	Static,       // No rotation
+	CW,           // Clockwise (Positive)
+	CCW           // Counter-clockwise (Negative)
 };
 
 // EOF PinDefinitions.h
